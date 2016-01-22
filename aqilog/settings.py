@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'aqilog.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.environ.get('DB_URL')
+        default='postgres://bibhas:toor@localhost/aqilog'
     )
 }
 
