@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '?lTvroYnk9gN%htS|Aaw;#S>&hTPKH_jrJ0z-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', True)
 
-ALLOWED_HOSTS = ['*', ]
+ALLOWED_HOSTS = ['*.bibhas.in', ]
 
 
 # Application definition
@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'aqilog.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.environ.get('DB_URL', 'postgres://bibhas:toor@localhost/aqilog')
+        default=os.environ.get('DB_URL')
     )
 }
 
