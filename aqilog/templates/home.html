@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block endhead %}
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+{% endblock endhead %}
+
+{% block body %}
+
+<div id="map-canvas"></div>
+<div class="container-fluid" id="main">
+  <div class="row">
+    <div class="col-xs-8" id="left">
+
+      <h2>Air Quality Index of Indian Cities</h2>
+
+      <hr>
+
+      <table class="table table-striped" id="table_locations">
+          <tr>
+            <th>Name</th>
+            <th>AQI</th>
+            <th>PM 2.5</th>
+            <th>PM 10</th>
+            <th>Last Updated</th>
+          </tr>
+      </table>
+
+    </div>
+    <div class="col-xs-4"><!--map-canvas will be postioned here--></div>
+
+  </div>
+</div>
+{% endblock body %}
+
+{% block endbody %}
+<script src="//cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.1/moment.min.js"></script>
+<script src="{% static 'js/scripts.js' %}"></script>
+{% endblock endbody %}
