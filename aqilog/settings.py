@@ -110,3 +110,8 @@ STATICFILES_DIRS = (
 )
 
 STATIC_ROOT = os.path.join(BASE_DIR, "assets", "collected")
+
+try:
+    from local_settings import *
+except Exception, e:
+    print('local settings not found')
